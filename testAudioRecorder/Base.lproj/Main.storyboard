@@ -1,24 +1,102 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="hh7-m4-HVW">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <scene sceneID="GJt-WE-fVz">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                <viewController id="sn7-96-ePy" customClass="ViewController" customModule="AVAudioRecorderTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="LSf-Cs-svL">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="lC6-Nd-enU">
+                                <rect key="frame" x="16" y="451.5" width="382" height="91"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zba-2b-5NK">
+                                        <rect key="frame" x="0.0" y="0.0" width="382" height="41"/>
+                                        <color key="backgroundColor" systemColor="systemGrayColor" red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
+                                        <state key="normal" title="START">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="onStartButton:" destination="sn7-96-ePy" eventType="touchUpInside" id="7TG-Cm-RBl"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kdq-CX-LQ1">
+                                        <rect key="frame" x="0.0" y="50" width="382" height="41"/>
+                                        <color key="backgroundColor" systemColor="systemGrayColor" red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
+                                        <state key="normal" title="STOP">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="onStopButton:" destination="sn7-96-ePy" eventType="touchUpInside" id="DgG-Vj-juG"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="radio" translatesAutoresizingMaskIntoConstraints="NO" id="aMs-wa-HWQ">
+                                <rect key="frame" x="191" y="255.5" width="32" height="32"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recording..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zms-UA-JnN">
+                                <rect key="frame" x="161" y="295.5" width="92" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="lC6-Nd-enU" firstAttribute="top" secondItem="Zms-UA-JnN" secondAttribute="bottom" constant="135.5" id="1Ev-aa-e9P"/>
+                            <constraint firstItem="Zms-UA-JnN" firstAttribute="top" secondItem="aMs-wa-HWQ" secondAttribute="bottom" constant="8" id="8o6-b9-fqH"/>
+                            <constraint firstItem="lC6-Nd-enU" firstAttribute="top" secondItem="oOF-O0-4fm" secondAttribute="top" constant="363.5" id="BPL-z9-qfI"/>
+                            <constraint firstItem="lC6-Nd-enU" firstAttribute="centerX" secondItem="oOF-O0-4fm" secondAttribute="centerX" id="H75-ck-Aie"/>
+                            <constraint firstItem="aMs-wa-HWQ" firstAttribute="centerX" secondItem="oOF-O0-4fm" secondAttribute="centerX" id="Km7-fS-R0S"/>
+                            <constraint firstItem="lC6-Nd-enU" firstAttribute="leading" secondItem="oOF-O0-4fm" secondAttribute="leading" constant="16" id="gke-wo-iR7"/>
+                            <constraint firstItem="Zms-UA-JnN" firstAttribute="centerX" secondItem="oOF-O0-4fm" secondAttribute="centerX" id="oZf-PS-2Vf"/>
+                            <constraint firstItem="oOF-O0-4fm" firstAttribute="trailing" secondItem="lC6-Nd-enU" secondAttribute="trailing" constant="16" id="pY4-PX-p1v"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="oOF-O0-4fm"/>
                     </view>
+                    <navigationItem key="navigationItem" id="ISs-rY-HdL"/>
+                    <connections>
+                        <outlet property="recordingImage" destination="aMs-wa-HWQ" id="3qT-Y3-nvt"/>
+                        <outlet property="recordingTextLabel" destination="Zms-UA-JnN" id="MmN-wW-2DY"/>
+                        <outlet property="startButton" destination="zba-2b-5NK" id="T5S-Tx-j6a"/>
+                        <outlet property="stopButton" destination="kdq-CX-LQ1" id="0kM-w3-FHu"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6gT-sL-JxA" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1047.8260869565217" y="137.94642857142856"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="dvv-TZ-gmj">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="hh7-m4-HVW" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Xyv-zQ-bke">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="sn7-96-ePy" kind="relationship" relationship="rootViewController" id="6yH-bQ-zzj"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7bd-OV-mRH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="137.94642857142856"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="radio" width="32" height="32"/>
+    </resources>
 </document>
