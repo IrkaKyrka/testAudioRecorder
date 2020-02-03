@@ -9,14 +9,15 @@
 import UIKit
 import AVFoundation
 
-class ViewController: UIViewController, AVAudioRecorderDelegate {
+class RecordingAudioViewController: UIViewController, AVAudioRecorderDelegate {
     @IBOutlet weak var startButton: UIButton!
     @IBOutlet weak var stopButton: UIButton!
     @IBOutlet weak var recordingImage: UIImageView!
     @IBOutlet weak var recordingTextLabel: UILabel!
     
-    var recordingSession: AVAudioSession!
-    var audioRecorder: AVAudioRecorder!
+    private var recordingSession: AVAudioSession!
+    private var audioRecorder: AVAudioRecorder!
+    var audioArray = [URL]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,6 +35,10 @@ class ViewController: UIViewController, AVAudioRecorderDelegate {
         stopRecording()
     }
     
+    @IBAction func onShowAudioList(_ sender: UIButton) {
+        AppController.navigate(from: self, to: .recordedAudioList(urls: audioArray), animated: true)
+    }
+    
     func setRecordingSession() {
         recordingSession = AVAudioSession.sharedInstance()
         
@@ -45,9 +50,9 @@ class ViewController: UIViewController, AVAudioRecorderDelegate {
             case AVAudioSessionRecordPermission.denied:
                 showSettings()
             case AVAudioSessionRecordPermission.undetermined:
-            recordingSession.requestRecordPermission({ _ in
+                recordingSession.requestRecordPermission({ _ in
                     print("User confirmed permission request")
-            })
+                })
             default:
                 break
             }
@@ -70,11 +75,11 @@ class ViewController: UIViewController, AVAudioRecorderDelegate {
     func showSettings() {
         let alertController = UIAlertController (title: "Go to App Settings", message: "Go to App Settings?", preferredStyle: .alert)
         let settingsAction = UIAlertAction(title: "Settings", style: .default) { (_) -> Void in
-
+            
             guard let settingsUrl = URL(string: UIApplication.openSettingsURLString) else {
                 return
             }
-
+            
             if UIApplication.shared.canOpenURL(settingsUrl) {
                 UIApplication.shared.open(settingsUrl, completionHandler: { (success) in
                     print("Settings opened: \(success)")
@@ -84,18 +89,21 @@ class ViewController: UIViewController, AVAudioRecorderDelegate {
         alertController.addAction(settingsAction)
         let cancelAction = UIAlertAction(title: "Cancel", style: .default, handler: nil)
         alertController.addAction(cancelAction)
-
-        present(alertController, animated: true, completion: nil)
+        
+        DispatchQueue.main.async { [weak self] in
+            self?.present(alertController, animated: true, completion: nil)
+        }
     }
     
     func startRecoding() {
-        let audioFile = getDocumentsDirectory().appendingPathComponent("recording.m4a")
+        let audioFile = getFileURL()
+        audioArray.append(audioFile)
         
         let settings: [String : Any] = [
             AVFormatIDKey: Int(kAudioFormatMPEG4AAC),
             AVSampleRateKey: 12000,
             AVNumberOfChannelsKey: 1,
-            AVEncoderAudioQualityKey: AVAudioQuality.high
+            AVEncoderAudioQualityKey: AVAudioQuality.high.rawValue
         ]
         
         do {
@@ -106,6 +114,11 @@ class ViewController: UIViewController, AVAudioRecorderDelegate {
             stopRecording()
         }
         
+    }
+    
+    func getFileURL() -> URL {
+        let path = getDocumentsDirectory().appendingPathComponent("\(Date()).m4a")
+        return path as URL
     }
     
     func stopRecording() {
@@ -130,9 +143,10 @@ class ViewController: UIViewController, AVAudioRecorderDelegate {
         })
     }
 }
+
 // MARK: - AVAudioRecorderDelegate
-extension ViewController {
+extension RecordingAudioViewController {
     func audioRecorderDidFinishRecording(_ recorder: AVAudioRecorder, successfully flag: Bool) {
-        recorder
+        
     }
 }
