@@ -13,11 +13,16 @@
 		0569185C23E483B50080388A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0569185A23E483B50080388A /* Main.storyboard */; };
 		0569185E23E483B70080388A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0569185D23E483B70080388A /* Assets.xcassets */; };
 		0569186123E483B70080388A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0569185F23E483B70080388A /* LaunchScreen.storyboard */; };
-		2F087FF523E48C6200E58F21 /* RecordedAudioListViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F087FF423E48C6200E58F21 /* RecordedAudioListViewController.storyboard */; };
+		0569187123E7FD540080388A /* Recordings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0569187023E7FD540080388A /* Recordings.swift */; };
+		0569187623E7FDD50080388A /* AudioListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0569187523E7FDD50080388A /* AudioListPresenter.swift */; };
+		0569187823E7FDE80080388A /* AudioListPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0569187723E7FDE80080388A /* AudioListPresenterProtocol.swift */; };
+		0569187A23E7FE000080388A /* AudioListViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0569187923E7FE000080388A /* AudioListViewControllerProtocol.swift */; };
+		0569187D23E807090080388A /* GeneratorDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0569187C23E807090080388A /* GeneratorDate.swift */; };
+		2F087FF523E48C6200E58F21 /* AudioListViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F087FF423E48C6200E58F21 /* AudioListViewController.storyboard */; };
 		2F087FF723E48D0800E58F21 /* NavigationItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F087FF623E48D0800E58F21 /* NavigationItems.swift */; };
-		2F087FF923E4A0B700E58F21 /* RecordedAudioListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F087FF823E4A0B700E58F21 /* RecordedAudioListViewController.swift */; };
+		2F087FF923E4A0B700E58F21 /* AudioListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F087FF823E4A0B700E58F21 /* AudioListViewController.swift */; };
 		2F087FFB23E4A3CE00E58F21 /* AppController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F087FFA23E4A3CE00E58F21 /* AppController.swift */; };
-		2F087FFE23E6AFF100E58F21 /* RecordedAudioListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F087FFD23E6AFF100E58F21 /* RecordedAudioListTableViewCell.swift */; };
+		2F087FFE23E6AFF100E58F21 /* AudioListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F087FFD23E6AFF100E58F21 /* AudioListTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,11 +34,16 @@
 		0569185D23E483B70080388A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0569186023E483B70080388A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0569186223E483B70080388A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2F087FF423E48C6200E58F21 /* RecordedAudioListViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RecordedAudioListViewController.storyboard; sourceTree = "<group>"; };
+		0569187023E7FD540080388A /* Recordings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recordings.swift; sourceTree = "<group>"; };
+		0569187523E7FDD50080388A /* AudioListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioListPresenter.swift; sourceTree = "<group>"; };
+		0569187723E7FDE80080388A /* AudioListPresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioListPresenterProtocol.swift; sourceTree = "<group>"; };
+		0569187923E7FE000080388A /* AudioListViewControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioListViewControllerProtocol.swift; sourceTree = "<group>"; };
+		0569187C23E807090080388A /* GeneratorDate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneratorDate.swift; sourceTree = "<group>"; };
+		2F087FF423E48C6200E58F21 /* AudioListViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AudioListViewController.storyboard; sourceTree = "<group>"; };
 		2F087FF623E48D0800E58F21 /* NavigationItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationItems.swift; sourceTree = "<group>"; };
-		2F087FF823E4A0B700E58F21 /* RecordedAudioListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordedAudioListViewController.swift; sourceTree = "<group>"; };
+		2F087FF823E4A0B700E58F21 /* AudioListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioListViewController.swift; sourceTree = "<group>"; };
 		2F087FFA23E4A3CE00E58F21 /* AppController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppController.swift; sourceTree = "<group>"; };
-		2F087FFD23E6AFF100E58F21 /* RecordedAudioListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordedAudioListTableViewCell.swift; sourceTree = "<group>"; };
+		2F087FFD23E6AFF100E58F21 /* AudioListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioListTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,18 +76,103 @@
 		0569185323E483B50080388A /* testAudioRecorder */ = {
 			isa = PBXGroup;
 			children = (
+				0569187B23E806F00080388A /* Helpers */,
+				0569186F23E7FD460080388A /* Models */,
+				0569186E23E7FBFF0080388A /* Resources */,
+				0569186D23E7FBEB0080388A /* Storyboards */,
+				0569186823E7FB6A0080388A /* Screens */,
 				2F087FFC23E4A50C00E58F21 /* Controller */,
 				2F087FF323E48C1700E58F21 /* AppDelegate */,
-				0569185823E483B50080388A /* RecordingAudioViewController.swift */,
-				0569185A23E483B50080388A /* Main.storyboard */,
-				0569185D23E483B70080388A /* Assets.xcassets */,
-				0569185F23E483B70080388A /* LaunchScreen.storyboard */,
-				0569186223E483B70080388A /* Info.plist */,
-				2F087FF423E48C6200E58F21 /* RecordedAudioListViewController.storyboard */,
-				2F087FF823E4A0B700E58F21 /* RecordedAudioListViewController.swift */,
-				2F087FFD23E6AFF100E58F21 /* RecordedAudioListTableViewCell.swift */,
 			);
 			path = testAudioRecorder;
+			sourceTree = "<group>";
+		};
+		0569186823E7FB6A0080388A /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				0569186B23E7FBA00080388A /* AudioList */,
+				0569186A23E7FB820080388A /* RecordingAudio */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		0569186A23E7FB820080388A /* RecordingAudio */ = {
+			isa = PBXGroup;
+			children = (
+				0569185823E483B50080388A /* RecordingAudioViewController.swift */,
+				0569185A23E483B50080388A /* Main.storyboard */,
+			);
+			path = RecordingAudio;
+			sourceTree = "<group>";
+		};
+		0569186B23E7FBA00080388A /* AudioList */ = {
+			isa = PBXGroup;
+			children = (
+				0569187323E7FDBA0080388A /* Presenter */,
+				0569187223E7FDA30080388A /* Controller */,
+				0569186C23E7FBC60080388A /* AudioCell */,
+			);
+			path = AudioList;
+			sourceTree = "<group>";
+		};
+		0569186C23E7FBC60080388A /* AudioCell */ = {
+			isa = PBXGroup;
+			children = (
+				2F087FFD23E6AFF100E58F21 /* AudioListTableViewCell.swift */,
+			);
+			path = AudioCell;
+			sourceTree = "<group>";
+		};
+		0569186D23E7FBEB0080388A /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				0569185F23E483B70080388A /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		0569186E23E7FBFF0080388A /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				0569185D23E483B70080388A /* Assets.xcassets */,
+				0569186223E483B70080388A /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		0569186F23E7FD460080388A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				0569187023E7FD540080388A /* Recordings.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		0569187223E7FDA30080388A /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				2F087FF423E48C6200E58F21 /* AudioListViewController.storyboard */,
+				2F087FF823E4A0B700E58F21 /* AudioListViewController.swift */,
+				0569187923E7FE000080388A /* AudioListViewControllerProtocol.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		0569187323E7FDBA0080388A /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				0569187523E7FDD50080388A /* AudioListPresenter.swift */,
+				0569187723E7FDE80080388A /* AudioListPresenterProtocol.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		0569187B23E806F00080388A /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				0569187C23E807090080388A /* GeneratorDate.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 		2F087FF323E48C1700E58F21 /* AppDelegate */ = {
@@ -157,7 +252,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0569186123E483B70080388A /* LaunchScreen.storyboard in Resources */,
-				2F087FF523E48C6200E58F21 /* RecordedAudioListViewController.storyboard in Resources */,
+				2F087FF523E48C6200E58F21 /* AudioListViewController.storyboard in Resources */,
 				0569185E23E483B70080388A /* Assets.xcassets in Resources */,
 				0569185C23E483B50080388A /* Main.storyboard in Resources */,
 			);
@@ -170,12 +265,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2F087FFE23E6AFF100E58F21 /* RecordedAudioListTableViewCell.swift in Sources */,
+				2F087FFE23E6AFF100E58F21 /* AudioListTableViewCell.swift in Sources */,
 				0569185923E483B50080388A /* RecordingAudioViewController.swift in Sources */,
+				0569187823E7FDE80080388A /* AudioListPresenterProtocol.swift in Sources */,
 				0569185523E483B50080388A /* AppDelegate.swift in Sources */,
-				2F087FF923E4A0B700E58F21 /* RecordedAudioListViewController.swift in Sources */,
+				0569187123E7FD540080388A /* Recordings.swift in Sources */,
+				2F087FF923E4A0B700E58F21 /* AudioListViewController.swift in Sources */,
 				0569185723E483B50080388A /* SceneDelegate.swift in Sources */,
+				0569187A23E7FE000080388A /* AudioListViewControllerProtocol.swift in Sources */,
 				2F087FF723E48D0800E58F21 /* NavigationItems.swift in Sources */,
+				0569187D23E807090080388A /* GeneratorDate.swift in Sources */,
+				0569187623E7FDD50080388A /* AudioListPresenter.swift in Sources */,
 				2F087FFB23E4A3CE00E58F21 /* AppController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -321,13 +421,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = N76VWDJ32E;
-				INFOPLIST_FILE = testAudioRecorder/Info.plist;
+				DEVELOPMENT_TEAM = 4B828PQURC;
+				INFOPLIST_FILE = testAudioRecorder/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = Ira.testAudioRecorder;
+				PRODUCT_BUNDLE_IDENTIFIER = Ira.Golubovich.testAudioRecorder;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -339,13 +439,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = N76VWDJ32E;
-				INFOPLIST_FILE = testAudioRecorder/Info.plist;
+				DEVELOPMENT_TEAM = 4B828PQURC;
+				INFOPLIST_FILE = testAudioRecorder/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = Ira.testAudioRecorder;
+				PRODUCT_BUNDLE_IDENTIFIER = Ira.Golubovich.testAudioRecorder;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

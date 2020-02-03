@@ -10,20 +10,25 @@ import UIKit
 import AVFoundation
 
 class RecordingAudioViewController: UIViewController, AVAudioRecorderDelegate {
+    
+    // MARK: - IBOutlets
     @IBOutlet weak var startButton: UIButton!
     @IBOutlet weak var stopButton: UIButton!
     @IBOutlet weak var recordingImage: UIImageView!
     @IBOutlet weak var recordingTextLabel: UILabel!
     
+    // MARK: - Private Data
     private var recordingSession: AVAudioSession!
     private var audioRecorder: AVAudioRecorder!
-    var audioArray = [URL]()
+    private var audioArray = [URL]()
     
+    // MARK: - View Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         setRecordingSession()
     }
     
+    // MARK: - IBActions
     @IBAction func onStartButton(_ sender: UIButton) {
         animateRecordingImage()
         startRecoding()
@@ -39,6 +44,7 @@ class RecordingAudioViewController: UIViewController, AVAudioRecorderDelegate {
         AppController.navigate(from: self, to: .recordedAudioList(urls: audioArray), animated: true)
     }
     
+     // MARK: - Private methods
     func setRecordingSession() {
         recordingSession = AVAudioSession.sharedInstance()
         

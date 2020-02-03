@@ -8,6 +8,6 @@
 
 import UIKit
 
-class RecordedAudioListTableViewCell: UITableViewCell {    
+class AudioListTableViewCell: UITableViewCell {    
     @IBOutlet weak var audioLabel: UILabel!
 }

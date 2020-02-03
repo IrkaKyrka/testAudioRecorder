@@ -15,14 +15,14 @@ enum NavigationItems {
     private var storyboardName: String {
         switch self {
         case .recordedAudioList:
-            return "RecordedAudioListViewController"
+            return "AudioListViewController"
         }
     }
     
     private var viewControllerId: String {
         switch self {
         case .recordedAudioList:
-            return "RecordedAudioListViewController"
+            return "AudioListViewController"
         }
     }
     
@@ -30,7 +30,7 @@ enum NavigationItems {
         let viewController = createViewController()
         switch self {
         case .recordedAudioList(let urls):
-            return createRecordedAudioListViewController(viewController: viewController, urls: urls)
+            return createAudioListViewController(viewController: viewController, urls: urls)
             
         }
     }
@@ -41,13 +41,14 @@ enum NavigationItems {
         return viewController
     }
     
-    private func createRecordedAudioListViewController(viewController: UIViewController, urls: [URL]) -> UIViewController {
-        guard let viewController = viewController as? RecordedAudioListViewController else {
-            assertionFailure("Can't cast to ScannedDataViewController")
+    private func createAudioListViewController(viewController: UIViewController, urls: [URL]) -> UIViewController {
+        guard let viewController = viewController as? AudioListViewController else {
+            assertionFailure("Can't cast to AudioListViewController")
             return UIViewController()
         }
         
-        viewController.audioUrls = urls
+        let presenter = AudioListPresenter(view: viewController)
+        viewController.presenter = presenter
         return viewController
     }
 }
